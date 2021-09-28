@@ -1,9 +1,6 @@
 package cz.helios;
 
-import cz.helios.commands.CPU;
-import cz.helios.commands.DeleteMessages;
-import cz.helios.commands.WhatTimeCommand;
-import cz.helios.commands.WhoAmICommand;
+import cz.helios.commands.*;
 import cz.helios.listeners.ReadyEvent;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -28,7 +25,7 @@ public class Helios {
     }
 
     static void listeners() {
-        Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent(), new CPU(), new DeleteMessages()};
+        Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent(), new CPU(), new DeleteMessages(), new DisconnectCommand()};
 
         for (Object i : listners) {
             jda.addEventListener(i);
