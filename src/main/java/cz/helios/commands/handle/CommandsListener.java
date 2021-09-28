@@ -1,6 +1,8 @@
 package cz.helios.commands.handle;
 
 import cz.helios.Config;
+import net.dv8tion.jda.api.entities.MessageChannel;
+import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -22,6 +24,10 @@ public class CommandsListener extends ListenerAdapter {
 
     protected String[] getArgs() {
         return e.getMessage().getContentRaw().split(" ");
+    }
+
+    protected String[] getSmartArgs() {
+        return e.getMessage().getContentRaw().replaceFirst(getArgs()[0], "").split(" ");
     }
 
     public String getName() {
@@ -54,5 +60,9 @@ public class CommandsListener extends ListenerAdapter {
         }
 
         return false;
+    }
+
+    protected MessageChannel getChannel() {
+        return e.getMessage().getChannel();
     }
 }

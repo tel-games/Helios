@@ -1,6 +1,7 @@
 package cz.helios;
 
 import cz.helios.commands.CPU;
+import cz.helios.commands.DeleteMessages;
 import cz.helios.commands.WhatTimeCommand;
 import cz.helios.commands.WhoAmICommand;
 import cz.helios.listeners.ReadyEvent;
@@ -20,14 +21,14 @@ public class Helios {
             e.printStackTrace();
         }
 
-        jda.getPresence().setActivity(Activity.playing("JDA development")); // Nastaví status jako že se koukná na něco.
+        jda.getPresence().setActivity(Activity.playing("Jsem nejlepší bot, hahaha")); // Nastaví status jako že se koukná na něco.
         listeners();
 
 
     }
 
     static void listeners() {
-        Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent(), new CPU()};
+        Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent(), new CPU(), new DeleteMessages()};
 
         for (Object i : listners) {
             jda.addEventListener(i);
