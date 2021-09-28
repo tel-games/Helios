@@ -14,7 +14,7 @@ public class Helios {
     static JDA jda;
     public static void main(String[] args) {
         try {
-            jda = JDABuilder.createDefault("ODMxODczNTUwNTYyMzYxMzk0.YHbknQ.aiLfKoO8dvUQsvP-su4Cda_NlEo").build(); // Vytvoří objekt jda a připojí se na server pomocí tokenu.
+            jda = JDABuilder.createDefault(Config.secretConfig.get(Config.secretConfig.SecredSavedData.TOKEN)).build(); // Vytvoří objekt jda a připojí se na server pomocí tokenu.
         } catch (LoginException e) {
             e.printStackTrace();
         }

@@ -14,7 +14,7 @@ public class PiCommands extends ListenerAdapter {
         String příkaz[] = event.getMessage().getContentRaw().split(" ");
 
         /*switch(příkaz[0]) {                                     //Nevim jestli tam ma byt 0!!!!
-            case ShitConfig.prefix + midfix + " time":
+            case Config.get("prefix") + midfix + " time":
                 time(event);
                 break;
         }*/

@@ -2,3 +2,4 @@ build
 .idea
 .gradle
 out
+src/main/java/cz/helios/secred-config.env

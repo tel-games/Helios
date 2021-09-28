@@ -1,6 +1,6 @@
 package cz.helios.commands;
 
-import cz.helios.ShitConfig;
+import cz.helios.Config;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -13,7 +13,7 @@ public class WhatTimeCommand extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         String[] args = event.getMessage().getContentRaw().split(" ");
 
-        if (args[0].equalsIgnoreCase(ShitConfig.prefix + "time")) {
+        if (args[0].equalsIgnoreCase(Config.get("prefix") + "time")) {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
 
