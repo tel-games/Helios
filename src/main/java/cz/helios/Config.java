@@ -15,7 +15,7 @@ public class Config {
     }
 
     public static enum SavedData {
-            PREFIX,
+            PREFIX, INFO, COMMAND
     }
 
     public static class secretConfig {

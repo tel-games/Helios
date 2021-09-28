@@ -33,6 +33,7 @@ dependencies {
     implementation 'io.github.cdimascio:java-dotenv:5.2.2' // dotenv - files
     implementation 'com.pi4j:pi4j-parent:1.2' // Pi api.
     implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.0-rc2' // yaml
+    implementation group: 'com.profesorfalken', name: 'jSensors', version: '2.2.1' // cpu temperature
 
 }
 
