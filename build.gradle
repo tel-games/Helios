@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id'application'
+    id'com.github.johnrengelman.shadow' version '6.0.0'
+}
+
+group 'cz.helios'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'cz.helios.Helios';
+
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+    mavenCentral()
+    jcenter()
+    maven {
+        name 'jfrog-duncte123'
+        url 'https://duncte123.jfrog.io/artifactory/maven'
+    }
+}
+
+dependencies {
+    implementation group: 'net.dv8tion', name: 'JDA', version: '4.3.0_305'
+    implementation group: 'com.jagrosh', name: 'jda-utilities', version: '3.0.5'
+    implementation group: 'me.duncte123', name: 'botCommons', version: '2.3.8' // some shit from yt
+    implementation 'io.github.cdimascio:java-dotenv:5.2.2' // dotenv - files
+    implementation 'com.pi4j:pi4j-parent:1.2' // Pi api.
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.0-rc2' // yaml
+
+}
+
+compileJava.options.encoding = 'UTF-8'
