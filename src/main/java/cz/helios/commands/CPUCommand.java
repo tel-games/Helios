@@ -6,13 +6,11 @@ import com.profesorfalken.jsensors.model.components.Cpu;
 import com.profesorfalken.jsensors.model.sensors.Fan;
 import com.profesorfalken.jsensors.model.sensors.Temperature;
 import cz.helios.commands.handle.CommandsListener;
-import net.dv8tion.jda.api.MessageBuilder;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
-import net.dv8tion.jda.api.requests.restaction.MessageAction;
 
 import java.util.List;
 
-public class CPU extends CommandsListener {
+public class CPUCommand extends CommandsListener {
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent e) {
         setEvent(e);

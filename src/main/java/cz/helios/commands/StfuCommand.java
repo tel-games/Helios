@@ -11,12 +11,12 @@ public class StfuCommand extends CommandsListener {
         setEvent(e);
 
         if (isCommand(new String[]{"stfu", "mute"})) {
-            String[] args = getArgs();
-            Member sender = e.getMember();
             Member target = e.getMessage().getMentionedMembers().get(0);
 
-            target.mute(true); // TODO Done this.
-
+            if (!target.getVoiceState().isGuildMuted())
+                target.mute(true).queue();
+            else
+                target.mute(false).queue();
         }
     }
 

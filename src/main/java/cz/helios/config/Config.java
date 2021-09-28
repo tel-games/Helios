@@ -1,10 +1,12 @@
-package cz.helios;
+package cz.helios.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class Config {
+    private static final String normalConfigPath = "src/main/java/cz/helios/config/config.env";
+    private static final String secredConfigPath = "src/main/java/cz/helios/config/secred-config.env";
 
-    private static final Dotenv dotenv = Dotenv.configure().filename("src/main/java/cz/helios/config.env").load();
+    private static final Dotenv dotenv = Dotenv.configure().filename(normalConfigPath).load();
 
     public static String get(String key) {
         return dotenv.get(key.toUpperCase());
@@ -20,7 +22,7 @@ public class Config {
 
     public static class secretConfig {
 
-        private static final Dotenv dotenv = Dotenv.configure().filename("src/main/java/cz/helios/secred-config.env").load();
+        private static final Dotenv dotenv = Dotenv.configure().filename(secredConfigPath).load();
 
         public static String get(String key) {
             return dotenv.get(key.toUpperCase());
@@ -34,4 +36,5 @@ public class Config {
             TOKEN,
         }
     }
+
 }

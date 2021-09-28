@@ -1,4 +1,4 @@
-package cz.helios;
+package cz.helios.config;
 
 public class ShitConfig {
     public static String prefix = ";";

@@ -1,11 +1,7 @@
 package cz.helios.listeners;
 
-import cz.helios.Config;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import cz.helios.config.Config;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import org.jetbrains.annotations.NotNull;
-
-import javax.annotation.Nonnull;
 
 public class ReadyEvent extends ListenerAdapter {
 

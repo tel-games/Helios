@@ -1,5 +1,5 @@
-build
+buildhelios
 .idea
 .gradle
 out
-src/main/java/cz/helios/secred-config.env
+src/main/java/cz/helios/config/secred-config.env

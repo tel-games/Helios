@@ -1,6 +1,6 @@
 package cz.helios.listeners;
 
-import cz.helios.ShitConfig;
+import cz.helios.config.ShitConfig;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberRemoveEvent;
