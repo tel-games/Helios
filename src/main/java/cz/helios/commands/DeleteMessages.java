@@ -1,6 +1,7 @@
 package cz.helios.commands;
 
 import cz.helios.commands.handle.CommandsListener;
+import cz.helios.config.Roles;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.MessageHistory;
@@ -13,7 +14,7 @@ public class DeleteMessages extends CommandsListener {
     public void onGuildMessageReceived(GuildMessageReceivedEvent e) {
         setEvent(e);
 
-        if (isCommand(new String[]{"del", "mazac"})) {
+        if (isCommand(new String[]{"del", "mazac"}) && checkByRole(Roles.developerRole())) {
             int count = Integer.parseInt(getArgs()[1]);
             MessageChannel channel = getChannel();
 
