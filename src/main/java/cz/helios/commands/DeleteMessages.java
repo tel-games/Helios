@@ -13,7 +13,7 @@ public class DeleteMessages extends CommandsListener {
     public void onGuildMessageReceived(GuildMessageReceivedEvent e) {
         setEvent(e);
 
-        if (isCommand(new String[]{"del", "mazac"})) {
+        if (isCommand(new String[]{"del", "mazac", "rm"})) {
             int count = Integer.parseInt(getArgs()[1]);
             MessageChannel channel = getChannel();
 

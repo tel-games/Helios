@@ -27,7 +27,7 @@ public class Helios {
 
     static void listeners() {
         Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent(), new CPUCommand(),
-                new DeleteMessages(), new DisconnectCommand(), new StfuCommand()};
+                new DeleteMessages(), new DisconnectCommand(), new StfuCommand(), new SusCommand()};
 
         for (Object i : listners) {
             jda.addEventListener(i);
