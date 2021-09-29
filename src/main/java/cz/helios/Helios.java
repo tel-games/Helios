@@ -11,7 +11,7 @@ import javax.security.auth.login.LoginException;
 
 public class Helios {
 
-    static JDA jda;
+    public static JDA jda;
     public static void main(String[] args) {
         try {
             jda = JDABuilder.createDefault(Config.secretConfig.get(Config.secretConfig.SecredSavedData.TOKEN)).build(); // Vytvoří objekt jda a připojí se na server pomocí tokenu.

@@ -60,6 +60,14 @@ public class CommandsListener extends ListenerAdapter {
         return false;
     }
 
+    protected boolean checkByRole(Role role) {
+        if (!e.getMember().getRoles().contains(role)) {
+            sendMessageToChannel("You don't have permissions to do that.");
+            return false;
+        }
+        return true;
+    }
+
     protected MessageChannel getChannel() {
         return e.getMessage().getChannel();
     }
