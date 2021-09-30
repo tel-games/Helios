@@ -43,7 +43,6 @@ public class CommandsListener extends ListenerAdapter {
     }
 
     protected boolean isCommand(String command) {
-        // if (Main.check(e)) return false; // TODO Change this check.
 
         if (getArgs()[0].toLowerCase().equalsIgnoreCase(Config.get(Config.SavedData.PREFIX) + command))
             return true;

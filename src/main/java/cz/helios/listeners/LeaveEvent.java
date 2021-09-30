@@ -1,5 +1,6 @@
 package cz.helios.listeners;
 
+import cz.helios.config.Config;
 import cz.helios.config.ShitConfig;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -20,7 +21,7 @@ public class LeaveEvent extends ListenerAdapter {
     @Override
     public void onGuildMemberRemove(GuildMemberRemoveEvent event) {
         Member m = event.getMember();
-        TextChannel infoChannnel = event.getGuild().getTextChannelById(ShitConfig.infoTextChannelID); // TODO Add text channel id.
+        TextChannel infoChannnel = event.getGuild().getTextChannelById(Config.get(Config.SavedData.INFO));
 
         Random r = new Random();
         int x = r.nextInt(messages.length); // Vygeneruje náhodné číslo v rozmezí 0 - déla messages.
