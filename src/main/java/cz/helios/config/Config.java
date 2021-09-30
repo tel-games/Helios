@@ -2,6 +2,8 @@ package cz.helios.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
+import java.io.File;
+
 public class Config {
     private static final String normalConfigPath = "src/main/java/cz/helios/config/config.env";
     private static final String secredConfigPath = "src/main/java/cz/helios/config/secred-config.env";
@@ -36,5 +38,13 @@ public class Config {
             TOKEN,
         }
     }
+
+    public static void checkFiles() {
+        File config = new File(normalConfigPath);
+        assert config.exists() : "Cannot find config file, download template form git: https://github.com/tel-games/Helios .";
+        File secredConfig = new File(secredConfigPath);
+        assert secredConfig.exists() : "Cannot find secredConfig file, text Bakterio for get one :D";
+    }
+
 
 }

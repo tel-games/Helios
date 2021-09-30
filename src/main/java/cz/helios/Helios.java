@@ -21,7 +21,7 @@ public class Helios {
 
         jda.getPresence().setActivity(Activity.playing("Jsem nejlepší bot, hahaha")); // Nastaví status jako že se koukná na něco.
         listeners();
-
+        Config.checkFiles();
 
     }
 
