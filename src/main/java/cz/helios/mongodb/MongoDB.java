@@ -4,12 +4,13 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import cz.helios.config.Config;
 import net.dv8tion.jda.api.entities.Member;
 import org.bson.Document;
 
 public class MongoDB {
 
-    static final String url = "mongodb+srv://Bakterio:rnKrwJhTwDPQWHNc@testing.uyb5t.mongodb.net/test";
+    static final String url = Config.secretConfig.get(Config.secretConfig.SecredSavedData.MONGO);
     static MongoClientURI clientURI = new MongoClientURI(url);
     static MongoClient mongoClient = new MongoClient(clientURI);
     static MongoDatabase mongoDatabase = mongoClient.getDatabase("Tutorial");

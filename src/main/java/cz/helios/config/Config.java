@@ -35,7 +35,7 @@ public class Config {
         }
 
         public static enum SecredSavedData {
-            TOKEN,
+            TOKEN, MONGO
         }
     }
 
