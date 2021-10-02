@@ -44,9 +44,7 @@ public class CommandsListener extends ListenerAdapter {
 
     protected boolean isCommand(String command) {
 
-        if (getArgs()[0].toLowerCase().equalsIgnoreCase(Config.get(Config.SavedData.PREFIX) + command))
-            return true;
-        return false;
+        return getArgs()[0].toLowerCase().equalsIgnoreCase(Config.get(Config.SavedData.PREFIX) + command);
     }
 
     protected boolean isCommand(String[] aliases) {
