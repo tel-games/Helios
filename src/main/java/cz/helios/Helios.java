@@ -37,6 +37,10 @@ public class Helios {
         for (Object i : listners) {
             jda.addEventListener(i);
         }
+
+        for (Object i: commands) {
+            jda.addEventListener(i);
+        }
     }
 
 }

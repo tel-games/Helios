@@ -13,9 +13,10 @@ public class MongoDBTestCommand extends CommandsListener {
         if (isCommand(new String[]{"mongodb", "database"}) && checkByRole(Roles.developerRole())) {
 
             try {
-                MongoDB.logMember(e.getMember());
+                MongoDB.logMember(e.getMember(), e.getGuild());
             } catch (Exception ex) {
                 e.getChannel().sendMessage("You have benn loogged into database.");
+                System.out.println(ex.getMessage());
             }
         }
     }

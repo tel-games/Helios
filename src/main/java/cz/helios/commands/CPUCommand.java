@@ -8,6 +8,7 @@ import com.profesorfalken.jsensors.model.sensors.Temperature;
 import cz.helios.commands.handle.CommandsListener;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
+import java.text.ParseException;
 import java.util.List;
 
 public class CPUCommand extends CommandsListener {
@@ -16,9 +17,12 @@ public class CPUCommand extends CommandsListener {
         setEvent(e);
 
         if (isCommand("cpu")) {
-            String[] args = getArgs();
 
-            Components components = JSensors.get.components();
+            try {
+                Components components = JSensors.get.components();
+            } catch (Exception exception) {
+                System.out.println(exception);
+            }
 
             StringBuilder message = new StringBuilder();
 
