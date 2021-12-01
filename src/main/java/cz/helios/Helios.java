@@ -27,7 +27,8 @@ public class Helios {
     }
 
     public static final CommandsListener[] commands = {new CPUCommand(), new DeleteMessages(), new DisconnectCommand(),
-            new StfuCommand(), new SusCommand(), new MongoDBTestCommand(), new HelpCommand(), new ShutdownCommand()};
+            new StfuCommand(), new SusCommand(), new MongoDBTestCommand(), new HelpCommand(), new ShutdownCommand(),
+            new InVoiceChannelCommand()};
 
     public static final Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent()};
 
