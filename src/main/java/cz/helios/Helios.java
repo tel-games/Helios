@@ -1,6 +1,7 @@
 package cz.helios;
 
 import cz.helios.commands.*;
+import cz.helios.commands.handle.CommandsListener;
 import cz.helios.config.Config;
 import cz.helios.listeners.ReadyEvent;
 import net.dv8tion.jda.api.JDA;
@@ -25,9 +26,13 @@ public class Helios {
 
     }
 
+    public static final CommandsListener[] commands = {new CPUCommand(), new DeleteMessages(), new DisconnectCommand(),
+            new StfuCommand(), new SusCommand(), new MongoDBTestCommand(), new HelpCommand(), new ShutdownCommand(),
+            new InVoiceChannelCommand()};
+
+    public static final Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent()};
+
     static void listeners() {
-        Object[] listners = {new WhoAmICommand(), new WhatTimeCommand(), new ReadyEvent(), new CPUCommand(),
-                new DeleteMessages(), new DisconnectCommand(), new StfuCommand(), new SusCommand()};
 
         for (Object i : listners) {
             jda.addEventListener(i);
