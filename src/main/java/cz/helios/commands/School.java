@@ -37,8 +37,6 @@ public class School extends CommandsListener {
 
                 }
             }
-
-
         }
     }
 }

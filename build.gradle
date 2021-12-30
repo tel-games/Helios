@@ -31,12 +31,12 @@ dependencies {
     implementation group: 'com.jagrosh', name: 'jda-utilities', version: '3.0.5'
     implementation group: 'me.duncte123', name: 'botCommons', version: '2.3.8' // some shit from yt
     implementation 'io.github.cdimascio:java-dotenv:5.2.2' // dotenv - files
-    implementation 'com.pi4j:pi4j-parent:2.0' // Pi api.
-    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.0-rc2' // yaml
+    implementation 'com.pi4j:pi4j-parent:2.1.1' // Pi api.
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.1' // yaml
     implementation group: 'com.profesorfalken', name: 'jSensors', version: '2.2.1' // cpu temperature
     implementation 'com.sedmelluq:lavaplayer:1.3.77' // LavaPlayer - audio
-    implementation group: 'org.mongodb', name: 'mongodb-driver', version: '3.6.3' // MongoDB
-
+    implementation group: 'org.mongodb', name: 'mongodb-driver', version: '3.12.10' // MongoDB
+    implementation 'com.google.code.gson:gson:2.8.9' // json
 }
 
 compileJava.options.encoding = 'UTF-8'

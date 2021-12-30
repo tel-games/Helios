@@ -18,8 +18,9 @@ public class CPUCommand extends CommandsListener {
 
         if (isCommand("cpu")) {
 
+            Components components = null;
             try {
-                Components components = JSensors.get.components();
+                components = JSensors.get.components();
             } catch (Exception exception) {
                 System.out.println(exception);
             }

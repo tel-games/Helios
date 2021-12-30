@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jetbrains.annotations.NotNull;
 
 public class CommandsListener extends ListenerAdapter {
     /**
@@ -13,7 +14,7 @@ public class CommandsListener extends ListenerAdapter {
 
     private GuildMessageReceivedEvent e;
 
-    public void setEvent(GuildMessageReceivedEvent e) {
+    public void setEvent(@NotNull GuildMessageReceivedEvent e) {
         this.e = e;
     }
     public String getHelp() {
