@@ -4,7 +4,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import cz.helios.config.Config;
+import cz.helios.config.old.Config;
 import net.dv8tion.jda.api.entities.Member;
 import org.bson.Document;
 

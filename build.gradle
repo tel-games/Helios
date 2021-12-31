@@ -7,11 +7,12 @@ plugins {
 group 'cz.helios'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
 mainClassName = 'cz.helios.Helios';
 
 version '1.0'
-
-sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     maven {

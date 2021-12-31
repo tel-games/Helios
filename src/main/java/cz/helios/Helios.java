@@ -7,22 +7,23 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 
 import javax.security.auth.login.LoginException;
+import java.io.IOException;
 
 public class Helios {
 
     public static JDA jda;
     public static void main(String[] args) {
         try {
-            jda = JDABuilder.createDefault(Config.secretConfig.get(Config.secretConfig.SecredSavedData.TOKEN)).build(); // Vytvoří objekt jda a připojí se na server pomocí tokenu.
-        } catch (LoginException e) {
+            Config.loadConfig();
+            jda = JDABuilder.createDefault(Config.getConfig().getToken()).build(); // Vytvoří objekt jda a připojí se na server pomocí tokenu.
+        } catch (LoginException | IOException e) {
             e.printStackTrace();
         }
 
+        assert jda == null : "Jda is null, internet wring, config wrong..";
         jda.getPresence().setActivity(Activity.playing("Jsem nejlepší bot, hahaha")); // Nastaví status jako že se koukná na něco.
         listeners();
         slashCommands();
-        Config.checkFiles();
-
     }
 
     public static final Object[] listners = {};

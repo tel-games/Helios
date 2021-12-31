@@ -1,6 +1,6 @@
 package cz.helios.listeners;
 
-import cz.helios.config.Config;
+import cz.helios.config.old.Config;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class ReadyEvent extends ListenerAdapter {

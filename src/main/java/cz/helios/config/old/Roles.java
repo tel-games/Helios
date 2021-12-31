@@ -1,4 +1,4 @@
-package cz.helios.config;
+package cz.helios.config.old;
 
 import cz.helios.Helios;
 import net.dv8tion.jda.api.entities.Role;

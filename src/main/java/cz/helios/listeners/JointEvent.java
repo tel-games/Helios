@@ -1,6 +1,6 @@
 package cz.helios.listeners;
 
-import cz.helios.config.ShitConfig;
+import cz.helios.config.old.ShitConfig;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 

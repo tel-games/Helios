@@ -1,5 +1,6 @@
 package cz.helios.commands.handle;
 
+import cz.helios.config.Config;
 import cz.helios.commands.TestCommand;
 import cz.helios.school.JsonTestingCommand;
 import net.dv8tion.jda.api.entities.Member;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 
 public class CommandListener extends ListenerAdapter {
     private static final ArrayList<Command> commands = new ArrayList<Command>();
-    private static final String prefix = ";";
+    private static final String prefix = Config.getConfig().getPrefix();
     protected Member sender;
 
     public CommandListener() {
