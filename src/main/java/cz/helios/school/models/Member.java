@@ -1,7 +1,5 @@
 package cz.helios.school.models;
 
-import cz.helios.commands.School;
-
 import java.util.Date;
 
 public class Member {

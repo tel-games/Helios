@@ -1,9 +1,7 @@
 package cz.helios;
 
-import cz.helios.commands.*;
-import cz.helios.commands.handle.CommandsListener;
+import cz.helios.commands.handle.CommandListener;
 import cz.helios.config.Config;
-import cz.helios.school.TestCommand;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -27,11 +25,7 @@ public class Helios {
 
     }
 
-    public static final CommandsListener[] commands = {new CPUCommand(), new DeleteMessages(), new DisconnectCommand(),
-            new StfuCommand(), new SusCommand(), new MongoDBTestCommand(), new HelpCommand(), new ShutdownCommand(),
-            new InVoiceChannelCommand(), new TestCommand(), new MembersCounterCommand(), new SlashTestCommand()};
-
-    public static final Object[] listners = {new WhoAmICommand(), new WhatTimeCommand()};
+    public static final Object[] listners = {};
 
     static void listeners() {
 
@@ -39,9 +33,7 @@ public class Helios {
             jda.addEventListener(i);
         }
 
-        for (Object i: commands) {
-            jda.addEventListener(i);
-        }
+        jda.addEventListener(new CommandListener());
     }
 
     private static void slashCommands() {
